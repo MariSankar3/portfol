@@ -1,7 +1,7 @@
 "use client";
 
 import { useRef, useEffect, useState } from "react";
-import { motion, useInView } from "framer-motion";
+import { motion, useInView, Variants } from "framer-motion";
 
 // ── Animated Counter ──────────────────────────────────────
 function Counter({ value, suffix = "" }: { value: number; suffix?: string }) {
@@ -38,7 +38,7 @@ const stats = [
   { label: "Happy Clients", value: 15, suffix: "+" },
 ];
 
-const fadeUp = {
+const fadeUp: Variants = {
   hidden: { opacity: 0, y: 30 },
   visible: (i: number) => ({
     opacity: 1,
